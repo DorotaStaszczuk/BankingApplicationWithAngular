@@ -1,0 +1,13 @@
+@mixin font-properties {
+  font-family: Lato;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+@mixin absolute-contain {
+  position: absolute;
+  object-fit: contain;
+}

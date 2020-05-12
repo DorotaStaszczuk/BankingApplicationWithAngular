@@ -1,0 +1,172 @@
+@import 'style/_variables.scss';
+@import 'style/_mixins.scss';
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-success {
+  width: 100%;
+  height: 330px;
+  background-color: #3ca933;
+  position: absolute;
+  top: 56px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-content: space-between;
+  z-index: 102;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 319px;
+  height: 50px;
+  border-radius: 4px;
+
+  p {
+    @include font-properties;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.modal-one {
+  font-family: Lato;
+  font-size: 11px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  color: $white-color;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.modal-two {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: $white-color;
+}
+
+.modal-three {
+  font-family: Lato;
+  font-size: 11px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  color: $white-color;
+}
+
+.modal-x-button {
+  width: 27px;
+  height: 27px;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background-image: url('../../../assets/white-x.svg');
+  background-repeat: no-repeat;
+  background-position: 52% 47%;
+  margin: 20px;
+}
+
+.check-mark {
+  background-image: url('../../../assets/white-check.svg');
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 13.8px;
+  color: $white-color;
+  margin: 20px;
+}
+
+.modal-success-send {
+  width: 186px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: rgba(47, 50, 52, 0.3);
+  color: $white-color;
+  margin-top: 30px;
+}
+
+.modal-success-send:hover,
+.modal-success-send:focus,
+.modal-x-button:hover,
+.modal-x-button:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.transfer-info {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $white-color;
+  margin-top: 20px;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .modal-success {
+    width: 100%;
+    height: 272px;
+    top: 112px;
+  }
+
+  .recipient-data {
+    margin-left: 100px;
+  }
+
+  .customer-and-recipient {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1352px) {
+  .modal-success {
+    height: 204px;
+    width: 1210px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    top: 146px;
+  }
+
+  .modal-data {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .transfer-amount-modal {
+    margin-left: 92px;
+  }
+}

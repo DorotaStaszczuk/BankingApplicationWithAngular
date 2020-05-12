@@ -1,0 +1,372 @@
+@import 'style/_variables.scss';
+@import 'style/_mixins.scss';
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white-color;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.x-button {
+    float: right;
+    background-color: $light-gray;
+    width: 18.2px;
+    height: 18.2px;
+    object-fit: contain;
+    color: $brand-color;
+    margin: 20px;
+}
+
+.upper-rectangle-text {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.transfer-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: $brand-color;
+    position: absolute;
+    bottom: -15px;
+    z-index: 100;
+}
+
+.transfer-form-text {
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    color: $white-color;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.upper-rectangle-container {
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.transfer-form-submit {
+    position: relative;
+    bottom: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transferForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.transfer-rectangle {
+    width: 100%;
+    height: 60px;
+    background-color: $light-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transfer-rectangle.bottom {
+    height: 73px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.hint {
+    z-index: 4;
+    position: absolute;
+    width: 320px;
+    height: 50px;
+    border-radius: 4px;
+    border: solid 1px #ac1419;
+    background-color: #ac1419;
+    display: flex;
+    align-items: center;
+
+    p {
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $white-color;
+        margin-left: 21px;
+    }
+}
+
+.currency {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #858585;
+    position: absolute;
+    top: 65px;
+    right: 13px;
+}
+
+.permanent-order {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: solid 1px $brand-color;
+    background-color: $brand-color;
+    margin: 0;
+}
+
+.permanent-order-check {
+    background-image: url('../../../assets/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox-text {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $second-brand-color;
+    margin-left: 20px;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-top: 30px;
+
+    p {
+        display: block;
+    }
+}
+
+.mobile {
+    margin-top: 5px;
+}
+
+.mobile-column {
+    position: relative;
+}
+
+.transfer-send-rectangle {
+    display: none;
+}
+
+.shadow {
+    box-shadow: 0 0 10px 0.2px rgba(0, 0, 0, 0.2);
+}
+
+.x-button:hover,
+.x-button:focus,
+.transfer-button:hover,
+.transfer-button:focus,
+.modal-x-button:hover,
+.modal-x-button:focus,
+.main-button:hover,
+.main-button:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url('../../../assets/select-arrow.svg');
+    background-repeat: no-repeat;
+    background-position-x: 280px;
+    background-position-y: 19px;
+    color: $second-brand-color;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.x-button {
+    position: absolute;
+    right: 0px;
+    top: 0.5px;
+}
+
+@media (min-width: 768px) {
+    .white-arrow {
+        display: none;
+    }
+
+    .modal {
+        top: 20px;
+    }
+
+    .x-button {
+        position: absolute;
+        right: 0px;
+        top: 11.5px;
+    }
+
+    select {
+        background-position-x: 688px;
+    }
+
+    .order-name {
+        width: 230px;
+        height: 50px;
+    }
+
+    .currency {
+        position: absolute;
+        top: 65px;
+        left: 187px;
+        right: 0;
+        text-align: left;
+        display: block;
+        width: 35px;
+    }
+
+    .transfer-form-submit {
+        position: relative;
+        bottom: 3px;
+    }
+
+    .tablet-row {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .tablet-column {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            display: block;
+        }
+    }
+
+    .transfer-rectangle.top {
+        height: 82px;
+    }
+
+    .title {
+        width: 479px;
+        height: 50px;
+    }
+
+    .transfer-amount {
+        width: 230px;
+        height: 50px;
+    }
+
+    select,
+    input {
+        width: 728px;
+        height: 50px;
+    }
+
+    .hint {
+        width: 728px;
+    }
+
+    .transfer-amount-div .hint {
+        width: 230px;
+    }
+
+    .tablet,
+    .transfer-send-rectangle {
+        display: flex;
+    }
+
+    .transfers-tablet {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+
+    .tablet-row {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .tablet-column {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            display: block;
+        }
+    }
+
+    .transfer-button {
+        width: 230px;
+        height: 50px;
+        border-radius: 4px;
+        background-color: $brand-color;
+        box-shadow: none;
+        align-self: flex-end;
+        bottom: 45px;
+    }
+
+    .transfer-rectangle.bottom {
+        height: 102px;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .transfer-rectangle.top {
+        height: 82px;
+    }
+
+    .upper-rectangle-container {
+        width: 728px;
+    }
+
+    .upper-rectangle-text {
+        font-size: 26px;
+    }
+}

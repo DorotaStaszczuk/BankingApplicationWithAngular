@@ -1,0 +1,217 @@
+@import 'style/_variables.scss';
+@import 'style/_mixins.scss';
+
+:host {
+    display: flex;
+    justify-content: center;
+    width: 315px;
+}
+
+section {
+    background-color: $white-color;
+    display: flex;
+    flex-direction: column;
+    margin: 30;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.transfers-up {
+    margin-top: 17px;
+}
+
+.transfers-down {
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border: solid 1px #dbdbdb;
+}
+
+.show {
+    @include font-properties;
+    width: 105px;
+    height: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.07;
+    letter-spacing: 0.17px;
+    text-align: left;
+    color: $brand-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.show:hover,
+.show:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.who {
+    @include font-properties;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.07;
+    letter-spacing: 0.17px;
+    color: #000000;
+}
+
+.how-much {
+    @include font-properties;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.07;
+    letter-spacing: 0.17px;
+    color: #000000;
+}
+
+.when {
+    @include font-properties;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.14px;
+    color: $darker-gray;
+}
+
+.why {
+    @include font-properties;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.14px;
+    color: $darker-gray;
+}
+
+.little-arrow {
+    margin-left: 8px;
+    margin-bottom: 4px;
+}
+
+.table {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    flex-grow: 1;
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.cell-one {
+    width: 15%;
+    justify-content: flex-start;
+}
+
+.cell-two {
+    width: 45%;
+    justify-content: flex-start;
+}
+
+.cell-three {
+    width: 40%;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    :host {
+        margin-top: 3px;
+        width: 725px;
+    }
+
+    .tablet-cell-one {
+        width: 10%;
+        justify-content: center;
+    }
+
+    .tablet-cell-two {
+        width: 5%;
+        justify-content: flex-start;
+    }
+
+    .tablet-cell-three {
+        width: 30%;
+        justify-content: flex-start;
+    }
+    .tablet-cell-four {
+        width: 25%;
+        justify-content: flex-start;
+    }
+
+    .tablet-cell-five {
+        width: 30%;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+
+    .transfers-up {
+        margin-top: 15px;
+    }
+
+    .transfers-down {
+        margin-bottom: 11px;
+    }
+
+    .little-arrow {
+        margin: 0;
+    }
+
+    .strap {
+        margin-bottom: 6px;
+        p {
+            @include font-properties;
+            font-size: 10px;
+            line-height: 1.5;
+            letter-spacing: 0.12px;
+            color: $darker-gray;
+            text-transform: uppercase;
+        }
+    }
+
+    .when {
+        font-size: 14px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.07;
+        letter-spacing: 0.17px;
+        text-align: center;
+        color: $second-brand-color;
+    }
+
+    .why {
+        margin-top: 2px;
+    }
+
+    .category {
+        @include font-properties;
+        font-size: 10px;
+        line-height: 1.5;
+        letter-spacing: 0.12px;
+        color: #3cae64;
+        text-transform: uppercase;
+    }
+
+    .show {
+        margin-left: 32px;
+        margin-top: 27.5px;
+    }
+}
+
+@media (min-width: 1352px) {
+    :host {
+        width: 783px;
+    }
+
+    section,
+    .strap,
+    .line {
+        width: 100%;
+    }
+}

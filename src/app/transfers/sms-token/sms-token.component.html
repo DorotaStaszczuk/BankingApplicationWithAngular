@@ -1,0 +1,17 @@
+<form #smsForm="ngForm" (submit)="onSubmit(smsForm)" class="sms-token-modal none">
+    <div>
+        <img src="assets/x.svg" (click)="close()" class="x-button" alt="x-button" />
+    </div>
+    <p><label for="smsToken">Podaj kod sms</label></p>
+    <input
+        ngModel
+        required
+        minlength="4"
+        maxlength="4"
+        type="string"
+        name="smsToken"
+        id="sms-token"
+        class="sms-token"
+    />
+    <button type="submit" [disabled]="!smsForm.valid" class="main-button button sms-token-send">Wyślij</button>
+</form>

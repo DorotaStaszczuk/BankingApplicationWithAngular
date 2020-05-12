@@ -1,0 +1,92 @@
+@import 'style/_variables.scss';
+@import 'style/_mixins.scss';
+
+aside {
+  display: none;
+}
+
+@media (min-width: 1352px) {
+  aside {
+    width: 380px;
+    display: block;
+  }
+
+  .call {
+    width: 380px;
+    height: 209.7px;
+    background-color: #67b708;
+    margin-bottom: 39.2px;
+    padding: 10px;
+  }
+
+  .call-text1 {
+    @include font-properties;
+    width: 184px;
+    height: 27px;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: normal;
+    color: $white-color;
+    margin: 12px;
+    margin-bottom: 21px;
+  }
+
+  .call-text2 {
+    font-family: Lato;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    width: 293px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.17px;
+    color: $white-color;
+    text-align: left;
+    margin: 12px;
+  }
+
+  .call-text3 {
+    @include font-properties;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: normal;
+    color: $white-color;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-left: 12px;
+  }
+
+  aside .empty {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: solid 2px $white-color;
+    padding: 0;
+    margin: 0 5px;
+  }
+
+  aside .full {
+    width: 11px;
+    height: 11px;
+    background-color: $white-color;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 5px;
+  }
+
+  .dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+
+  .blue-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+  }
+}

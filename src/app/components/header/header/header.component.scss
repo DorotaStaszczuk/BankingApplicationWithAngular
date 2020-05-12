@@ -1,0 +1,202 @@
+@import 'style/_variables.scss';
+@import 'style/_mixins.scss';
+
+.nav-mobile {
+  width: 100%;
+  height: 56px;
+  background-color: $brand-color;
+}
+
+.logo {
+  @include absolute-contain;
+  top: 8px;
+  left: 20px;
+  height: 40px;
+}
+
+.upper-nav,
+.lower-nav {
+  display: none;
+}
+
+.logo:hover,
+.logo:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+  .nav-mobile,
+  .logo,
+  .logo3 {
+    display: none;
+  }
+
+  .upper-nav {
+    width: 100%;
+    height: 56px;
+    background-color: #0072b9;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .lower-inside,
+  .upper-inside {
+    width: 728px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .upper-inside {
+    align-items: center;
+  }
+
+  .rectangles {
+    width: 226px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .lower-nav {
+    width: 100%;
+    height: 56px;
+    background-color: $brand-color;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .logo2 {
+    height: 40px;
+  }
+
+  .lookup {
+    @include font-properties;
+    width: 69px;
+    height: 19px;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.19px;
+    text-align: right;
+    color: #b4b4b4;
+    margin-left: 25px;
+  }
+
+  .magnifier-red {
+    margin-right: 19px;
+    width: 19px;
+    height: 19px;
+  }
+
+  .search-rectangle {
+    width: 280px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: $white-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+  }
+
+  .payment {
+    @include font-properties;
+    width: 68px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    color: $white-color;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .products {
+    @include font-properties;
+    width: 68px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    color: $white-color;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .rectangle {
+    width: 113px;
+    height: 41px;
+    background-color: $brand-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .active {
+    background-color: $light-gray;
+
+    p {
+      color: $brand-color;
+    }
+  }
+
+  .logo2:hover,
+  .logo2:focus,
+  .products:hover,
+  .products:focus,
+  .payment:hover,
+  .payment:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1352px) {
+
+  .nav-mobile,
+  .logo2 {
+    display: none;
+  }
+
+  .upper-nav,
+  .lower-nav {
+    display: flex;
+  }
+
+  .magnifier-red {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo3 {
+    display: flex;
+    height: 40px;
+  }
+
+  .lower-inside,
+  .upper-inside {
+    width: 1206px;
+  }
+
+  .search-rectangle {
+    right: 66px;
+    width: 485px;
+  }
+
+  .logo3:hover,
+  .logo3:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

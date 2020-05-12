@@ -1,0 +1,118 @@
+@import 'style/_variables.scss';
+@import 'style/_mixins.scss';
+
+.magnifier {
+    @include absolute-contain;
+    top: 17px;
+    right: 70px;
+    width: 20px;
+    height: 20px;
+}
+
+.hamburger {
+    @include absolute-contain;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 14px;
+}
+
+.magnifier:hover,
+.magnifier:focus,
+.hamburger:hover,
+.hamburger:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.upper-nav,
+.lower-nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .upper-nav,
+    .lower-nav {
+        display: flex;
+    }
+
+    .name,
+    .nav-mobile,
+    .logo {
+        display: none;
+    }
+
+    .menu-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .settings {
+        width: 16px;
+        height: 16px;
+    }
+
+    .mail {
+        width: 20px;
+        height: 14px;
+        margin-left: 20px;
+    }
+
+    .user {
+        width: 16px;
+        height: 16px;
+        margin-left: 20px;
+    }
+
+    .logout {
+        @include font-properties;
+        text-transform: uppercase;
+        width: 60px;
+        height: 15px;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: normal;
+        letter-spacing: 0.14px;
+        text-align: right;
+        color: $white-color;
+        margin-left: 41px;
+    }
+
+    .settings:hover,
+    .settings:focus,
+    .mail:hover,
+    .mail:focus,
+    .user:hover,
+    .user:focus,
+    .logout:hover,
+    .logout:focus {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1352px) {
+    .logout {
+        margin-left: 60px;
+    }
+
+    .name {
+        @include font-properties;
+        display: initial;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: normal;
+        letter-spacing: 0.14px;
+        text-align: right;
+        color: $white-color;
+        margin-left: 19px;
+    }
+
+    .name:hover,
+    .name:focus {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
