@@ -1,5 +1,5 @@
 <section *ngIf="isMobile">
-    <div *ngFor="let transfer of transfers | async | slice: 0:[items]">
+    <div *ngFor="let transfer of transfers | async | slice: 0:items">
         <div class="line"></div>
         <div class="table">
             <div class="cell-one cell transfers-up">
@@ -31,7 +31,7 @@
         <div class="cell tablet-cell-four"><p class="category">Kategoria</p></div>
         <div class="cell tablet-cell-five"><p class="how-much">Kwota</p></div>
     </div>
-    <div *ngFor="let transfer of transfers | async | slice: 0:[items]">
+    <div *ngFor="let transfer of transfers | async | slice: 0:items">
         <div class="line"></div>
         <div class="table">
             <div class="cell transfers-up tablet-cell-one">
