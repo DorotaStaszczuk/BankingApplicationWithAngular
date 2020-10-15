@@ -4,6 +4,14 @@ https://dorotastaszczuk.github.io/BankingApplicationWithAngular/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
+## Helpful info
+
+> e-mail: user1@gmail.com
+
+> password: 123456
+
+> sms token: 1234
+
 ## General info
 
 Banking application that includes: main site view with account history, transfer, sms token, success and failure modals. Responsive web design done with mobile first approach. Firebase Realtime Database used. Firebase provides a real-time database and back-end as a service.
@@ -13,14 +21,6 @@ Banking application that includes: main site view with account history, transfer
 After cloning the repo install the npm packages described in the package.json
 
 `$ npm install`
-
-## Helpful info
-
-> e-mail: user1@gmail.com
-
-> password: 123456
-
-> sms token: 1234
 
 ## Development server
 
