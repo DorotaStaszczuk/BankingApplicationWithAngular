@@ -14,7 +14,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## General info
 
-Banking application that includes: main site view with account history, transfer, sms token, success and failure modals. Responsive web design done with mobile first approach. Firebase Realtime Database used. Firebase provides a real-time database and back-end as a service.
+Single-page application for online banking written using Angular. Logging in, main
+page view with account history, transfer, sms token, success and failure modals.
+Responsive web design done with mobile first approach. Firebase Realtime Database
+used. Firebase provides a real-time database and back-end as a service.
 
 ## Installation
 
